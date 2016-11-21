@@ -6,4 +6,7 @@
  * Time: 23:46
  */
 
-echo '<h1>Hello!</h1>';
+
+?>
+
+<h1>hELLO</h1>

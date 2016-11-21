@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function index()
+    {
+        $users = DB::table('users')->get();
+
+        return view('user.index', ['users' => $users]);
+    }
 }

@@ -49,3 +49,20 @@ Route::group(array('prefix' => 'admin'), function()
         return View::make('admin.posts-create');
     });
 });
+
+
+Route::group(array('prefix' => 'licenciatura'), function()
+{
+    // main page for the admin section (app/views/admin/dashboard.blade.php)
+    Route::get('/', function()
+    {
+        return View::make('licenciatura.index');
+    });
+
+});
+
+//Contact Page
+Route::get('contact', 'ContactController@getContact');
+
+//Form request:: POST action will trigger to controller
+Route::post('contact_request','ContactController@getContactUsForm');
